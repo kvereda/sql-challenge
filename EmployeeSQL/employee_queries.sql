@@ -18,8 +18,8 @@ Select employees.emp_no,
 		employees.first_name,
 		employees.hire_date 
 from employees 
-where hire_date between '12/31/1985' and '1/1/1987'
-order by hire_date desc
+where hire_date between '1/1/1986' and '12/31/1986'
+order by hire_date asc
 ;
 
 --Manager information (department number, department name, employee number, last name, first name )
