@@ -31,7 +31,7 @@ CREATE TABLE employees (
 	first_name varchar (40) not null,
 	last_name varchar (40) not null,
 	sex varchar (3) not null,
-	hire_date varchar (10) not null,
+	hire_date date not null,
 	primary key (emp_no)
 );
 
@@ -67,12 +67,14 @@ employees.emp_no = salaries.emp_no
 
 --Employees who were hired after 1986 by first name, last name and hired date
 
-Select employees.emp_no, 
+Select employees.emp_no,
 		employees.last_name,
 		employees.first_name,
 		employees.hire_date 
 from employees 
-where hire_date between '1985-12-31' and '1987-01-01';
+where hire_date between '1/1/1986' and '12/31/1986'
+order by hire_date asc
+;
 
 --Manager information (department number, department name, employee number, last name, first name )
 Select dept_manager.dept_no,

@@ -31,7 +31,7 @@ CREATE TABLE employees (
 	first_name varchar (40) not null,
 	last_name varchar (40) not null,
 	sex varchar (3) not null,
-	hire_date varchar (10) not null,
+	hire_date date not null,
 	primary key (emp_no)
 );
 
